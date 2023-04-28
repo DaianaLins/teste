@@ -1,0 +1,29 @@
+<body>
+  <app-header></app-header>
+  <div [ngClass]="container">
+    <div [ngClass]="content">
+      <div [ngStyle]="{'padding-top': '56px','display': 'flex', 'flexDirection': 'column'}">
+        <div [ngStyle]="{'padding-top': '16px', 'padding-left': '70px', 'display': 'flex', 'flexDirection': 'column'}">
+          <h3 [ngStyle]="{'font-size': '24px', 'color': '#354564'}">Material didático</h3>
+          <p id="para">Acesse suas últimas apresentações de aula.</p>
+        </div>
+        <div [ngStyle]="{'padding-top': '10px'}">
+          <div
+            [ngStyle]="{'padding-top': '18px','flexDirection': 'row', 'display': 'flex', 'justify-content': 'center',  'padding-left': '70px', 'padding-right': '70px'}">
+            <ul [ngStyle]="{'padding-top': '18px'}">
+              <div [ngStyle]="{'flexDirection': 'column'}">
+                <li *ngFor="let material of materiais">
+                  <div id="card">
+
+                  </div>
+                  <h3 id="desc">Aula {{material.id}}: {{material.text}} </h3>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
